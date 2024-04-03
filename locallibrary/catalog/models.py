@@ -1,4 +1,6 @@
 from django.db import models
+from django.conf import settings
+from datetime import date
 
 from django.urls import reverse  # To generate URLS by reversing URL patterns
 
@@ -79,8 +81,8 @@ class BookInstance(models.Model):
     book = models.ForeignKey('Book', on_delete=models.RESTRICT, null=True)
     imprint = models.CharField(max_length=200)
     due_back = models.DateField(null=True, blank=True)
-    borrower = models.ForeignKey(
-        settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
+    borrower = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
+
 
     @property
     def is_overdue(self):
