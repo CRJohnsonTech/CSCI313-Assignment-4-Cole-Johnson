@@ -1,13 +1,59 @@
-.sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
-  }
-#logout-form {
-    display: inline;
-  }
-#logout-form button {
-    padding: 0;
-    margin: 0;
-  }
-  
+:root {
+  --primary-color: #007bff; 
+  --secondary-color: #6c757d; 
+  --success-color: #28a745;
+  --danger-color: #dc3545; 
+  --warning-color: #ffc107; 
+  --info-color: #17a2b8; 
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: white; 
+}
+
+.list-group {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.list-group li {
+  padding: 8px;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.list-group li a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.list-group li a:hover {
+  color: var(--primary-color);
+}
+
+.col-sm-10 {
+  padding: 20px;
+  background-color: white; 
+  border-radius: 8px; 
+  border: 1px solid rgba(0, 0, 0, .1); 
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+.page-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-links a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.page-current {
+  font-weight: bold;
+}
