@@ -229,7 +229,6 @@ class BookInstanceCreate(PermissionRequiredMixin, CreateView):
 
 class BookInstanceUpdate(PermissionRequiredMixin, UpdateView):
     model = BookInstance
-    # fields = "__all__"
     fields = ['imprint', 'due_back', 'borrower', 'status']
     permission_required = 'catalog.change_bookinstance'
 
